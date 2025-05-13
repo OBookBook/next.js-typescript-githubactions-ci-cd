@@ -68,6 +68,7 @@ jobs:
         env:
           VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
           VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+          DEBUG_URL: ${{ secrets.PROD_DEBUG_URL }}
           DEBUG_MESSAGE: ${{ secrets.PROD_DEBUG_MESSAGE }}
           DATABASE_URL: ${{ secrets.PROD_DATABASE_URL }}
           DIRECT_URL: ${{ secrets.PROD_DIRECT_URL }}
@@ -79,4 +80,5 @@ jobs:
         env:
           VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
           VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+          DEBUG_URL: ${{ secrets.PROD_DEBUG_URL }}
           DEBUG_MESSAGE: ${{ secrets.PROD_DEBUG_MESSAGE }}
