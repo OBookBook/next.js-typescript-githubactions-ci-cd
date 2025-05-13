@@ -42,8 +42,8 @@ jobs:
 
       - name: Set Vercel Environment Variables
         run: |
-          vercel env rm DEBUG_URL preview --yes --token=${{ secrets.VERCEL_TOKEN }} || true
-          echo "${{ secrets.TEST_DEBUG_URL }}" | vercel env add DEBUG_URL preview --token=${{ secrets.VERCEL_TOKEN }}
+          vercel env rm DEBUG_MESSAGE preview --yes --token=${{ secrets.VERCEL_TOKEN }} || true
+          echo "${{ secrets.TEST_DEBUG_MESSAGE }}" | vercel env add DEBUG_MESSAGE preview --token=${{ secrets.VERCEL_TOKEN }}
         env:
           VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
           VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
@@ -61,7 +61,7 @@ jobs:
         env:
           VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
           VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
-          DEBUG_URL: ${{ secrets.TEST_DEBUG_URL }}
+          DEBUG_MESSAGE: ${{ secrets.TEST_DEBUG_MESSAGE }}
           DATABASE_URL: ${{ secrets.TEST_DATABASE_URL }}
           DIRECT_URL: ${{ secrets.TEST_DIRECT_URL }}
           NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.TEST_NEXT_PUBLIC_SUPABASE_URL }}
@@ -72,4 +72,4 @@ jobs:
         env:
           VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
           VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
-          DEBUG_URL: ${{ secrets.TEST_DEBUG_URL }}
+          DEBUG_MESSAGE: ${{ secrets.TEST_DEBUG_MESSAGE }}
